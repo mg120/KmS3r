@@ -1,0 +1,80 @@
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:elevation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@mipmap/plus_icon"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp"
+                    android:text="@string/add_offer"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/iv_notification"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@mipmap/notification_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_messages_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:src="@mipmap/notification_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.AppBarLayout>
+

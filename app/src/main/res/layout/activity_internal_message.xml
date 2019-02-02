@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar_with_title_only" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layout_add_message">
+
+            <include layout="@layout/fragment_recycler" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_add_message"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorDivider">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/my_message_background"
+                android:text="@string/send"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_message_content"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/btn_send"
+                android:background="@drawable/login_box_white_rounded_background"
+                android:hint="@string/write_message"
+                android:paddingRight="5dp"
+                android:textColor="@color/colorLessBlack"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

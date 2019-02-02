@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="0dp"
+    android:layout_height="25dp"
+    android:layout_marginRight="10dp"
+    android:layout_weight="1"
+    android:padding="3dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/iv_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/answer_icon" />
+    <TextView
+        android:id="@+id/answers_counter_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/iv_answer"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        android:layout_marginRight="2dp"
+        />
+</RelativeLayout>

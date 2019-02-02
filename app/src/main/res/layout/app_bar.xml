@@ -1,0 +1,104 @@
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:elevation="0dp"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/frame_count"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_notification"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@mipmap/notification_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_notification_count"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/count_oval_background"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/frame_count">
+
+                    <ImageView
+                        android:id="@+id/iv_messages_icon"
+                        android:layout_width="40dp"
+
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:src="@mipmap/message_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_messages_count"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/count_oval_background"
+                        android:gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <TextView
+
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.AppBarLayout>
+

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/cover_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/iv_user_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <FrameLayout
+                    android:id="@+id/layout_add_images"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_user_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@color/colorDivider" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/custom_loading_background"
+                        android:padding="50dp"
+                        android:src="@mipmap/camera" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/update_cover_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/layout_add_images"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/camera"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_choose_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/email_icon"
+                    android:background="@drawable/form_input_border"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/choose_your_country"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/form_input_border">
+
+                    <TextView
+                        android:id="@+id/phone_code"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:text="@string/country_code"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:id="@+id/phone_divider"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/phone_code"
+                        android:background="@color/colorLoginInputBorder" />
+
+                    <EditText
+                        android:id="@+id/et_user_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_toLeftOf="@+id/phone_divider"
+                        android:background="@android:color/transparent"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/user_phone"
+                        android:inputType="phone"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/name_icon"
+                    android:background="@drawable/form_input_border"
+                    android:gravity="right"
+                    android:hint="@string/user_bio"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_hashtags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/name_icon"
+                    android:background="@drawable/form_input_border"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/user_hashtags"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+
+                <Button
+                    android:id="@+id/btn_complete_register"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/login_button_blue_background"
+                    android:gravity="center"
+                    android:text="@string/complete"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/complete_register_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</ScrollView>
+

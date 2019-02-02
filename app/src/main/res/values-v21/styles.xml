@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <!--<item name="android:actionMenuTextColor">@color/colorWhite</item>-->
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+    </style>
+
+</resources>

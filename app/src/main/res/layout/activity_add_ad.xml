@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:autofit="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_add_ad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.tqnee.KamS3r.Activites.AddAdActivity">
+
+            <include layout="@layout/app_bar_with_title_only" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_choose_category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/categories_background"
+                android:paddingBottom="@dimen/ad_edit_text_padding">
+
+                <ImageView
+                    android:id="@+id/iv_category_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_menu_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_category_icon"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp"
+                    android:text="القسم"
+                    android:textColor="@color/colorLessBlack"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_chevron_left_back_24dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/car" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/laptob" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mobile" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/ad_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/categories_background"
+                android:drawableRight="@drawable/question"
+                android:drawablePadding="10dp"
+                android:hint="إسم الاعلان"
+                android:paddingTop="@dimen/ad_edit_text_padding"
+                android:paddingRight="7dp"
+                android:paddingBottom="@dimen/ad_edit_text_padding"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/ad_details_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/categories_background"
+                android:drawableRight="@drawable/q"
+                android:drawablePadding="10dp"
+                android:hint="تفاصيل الاعلان"
+                android:inputType="textMultiLine"
+                android:paddingTop="@dimen/ad_edit_text_padding"
+                android:paddingRight="7dp"
+                android:paddingBottom="@dimen/ad_edit_text_padding"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/categories_background">
+
+                <TextView
+                    android:id="@+id/price_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/dollar"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/ad_edit_text_padding"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="@dimen/ad_edit_text_padding"
+                    android:text="السعر"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/price_edit_text"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/price_text_view"
+                    android:background="@drawable/rectangle_empty_white_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:paddingRight="7dp"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/currency_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/price_edit_text"
+                    android:paddingRight="5dp"
+                    android:text="ريال سعودى"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/is_discussable_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/currency_text_view"
+                    android:text="قابل للنقاش"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/new_or_used_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@drawable/categories_background"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingRight="40dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مستعمل"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/new_ad_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="جديد"
+                    android:textSize="12sp" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/categories_background"
+                android:paddingTop="5dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/state_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/location"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="المدينة"
+                    android:textSize="12sp" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/country_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="20dp"
+                    android:prompt="@string/choose_state"
+                    android:textSize="12sp"
+                    android:visibility="gone"></android.support.v7.widget.AppCompatSpinner>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/mobile_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/categories_background"
+                android:drawableRight="@drawable/phone"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:hint="رقم الموبايل"
+                android:inputType="phone"
+                android:paddingTop="@dimen/ad_edit_text_padding"
+                android:paddingRight="10dp"
+                android:paddingBottom="@dimen/ad_edit_text_padding"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/categories_background"
+                android:drawableRight="@drawable/msg"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:hint="البريد الالكترونى"
+                android:paddingTop="@dimen/ad_edit_text_padding"
+                android:paddingRight="10dp"
+                android:paddingBottom="@dimen/ad_edit_text_padding"
+                android:textSize="12sp" />
+
+            <me.grantland.widget.AutofitTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/categories_background"
+                android:drawableRight="@drawable/camera"
+                android:drawablePadding="5dp"
+                android:maxLines="1"
+                android:paddingEnd="5dp"
+                android:paddingRight="10dp"
+                android:text="اضافة صورة (الصورة الأولى هى الصورة الرئيسة التى تظهر أولاً)"
+                android:textSize="12sp"
+                autofit:minTextSize="5sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/categories_background"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/first_photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/upload_image_place_holder"
+                        android:padding="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/delete_first_photo_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/first_photo_button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_clear_black_24dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/second_photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/upload_image_place_holder"
+                        android:padding="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/delete_second_photo_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/second_photo_button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_clear_black_24dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/third_photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/upload_image_place_holder"
+                        android:padding="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/delete_third_photo_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/third_photo_button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_clear_black_24dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/fourth_photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/upload_image_place_holder"
+                        android:padding="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/delete_fourth_photo_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fourth_photo_button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_clear_black_24dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/fifth_photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/upload_image_place_holder_gray"
+                        android:padding="5dp" />
+
+                    <ImageButton
+                        android:id="@+id/delete_fifth_photo_image_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fifth_photo_button"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/ic_clear_black_24dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/categories_background"
+                android:paddingTop="30dp">
+
+                <Button
+                    android:id="@+id/post_ad_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_green_rounded_background"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="انشر الإعلان"
+                    android:textColor="@color/colorWhite" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/add_ad_progress_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+</ScrollView>

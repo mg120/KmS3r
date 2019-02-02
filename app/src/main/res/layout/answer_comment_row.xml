@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/person_place_holder" />
+
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/iv_user_image"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:text="@string/user_name"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/tv_answer_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/iv_user_image"
+            android:gravity="right"
+            android:maxLines="2"
+            android:text="@string/test_answer_content"
+            android:textColor="@color/colorQuestionBarText"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider" />
+</LinearLayout>

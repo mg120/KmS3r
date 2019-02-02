@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activites.EditQuestion">
+
+    <FrameLayout
+        android:id="@+id/tool_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/edit_ques_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="right|center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ic_back"
+            android:padding="3dp"
+            tools:layout_marginEnd="5dp"
+            tools:layout_marginRight="0dp" />
+
+        <TextView
+            android:id="@+id/prod_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/edit_ques"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/edit_lay_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/tv_department_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/tv_department"
+                        android:drawablePadding="10dp"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="10dp"
+                        android:text="@string/choose_category"
+                        android:textColor="@color/colorLessBlack"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/edit_tv_department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_department_next"
+                        android:gravity="right|center_vertical"
+                        android:text="@string/choose_category"
+                        android:textColor="@color/colorLessBlack"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_department_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:contentDescription="@string/image" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+                <EditText
+                    android:id="@+id/edit_et_quetion_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/how_much"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorLessBlack"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+                <RelativeLayout
+                    android:id="@+id/edit_lay_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/edit_tv_country_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv_country"
+                        android:drawablePadding="10dp"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="10dp"
+                        android:text="@string/state"
+                        android:textColor="@color/colorLessBlack"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/edit_tv_country"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/iv_country_next"
+                        android:background="@android:color/transparent"
+                        android:gravity="right|center_vertical"
+                        android:text="اختر مدينة"
+                        android:textColor="@color/colorLessBlack"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_country_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+
+                <RelativeLayout
+                    android:id="@+id/edit_lay_attachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/edit_tv_attachment_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/iv_attachment"
+                        android:drawablePadding="10dp"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="10dp"
+                        android:text="@string/attachment"
+                        android:textColor="@color/colorLessBlack"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/edit_iv_attachment"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/btn_edit_image"
+                        android:gravity="right|center_vertical"
+                        android:scaleType="fitXY" />
+
+                    <Button
+                        android:id="@+id/btn_edit_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/register_button_background"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/change_image"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorDivider" />
+
+
+                <Button
+                    android:id="@+id/btn_edit_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/register_button_background"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="@string/edit"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_login_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorMainBackground"
+                android:gravity="center"
+                android:text="@string/you_should_login"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/edit_ques_progress_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

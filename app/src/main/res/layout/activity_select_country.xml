@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_country"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tqnee.KamS3r.Activites.SelectCountryActivity">
+
+    <include layout="@layout/app_bar_with_title_only" />
+
+    <LinearLayout
+        android:id="@+id/country_layout_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_choose_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="اختر الدولة"
+            android:textColor="@color/colorBlack"
+            android:textSize="28sp" />
+
+        <RadioGroup
+            android:id="@+id/country_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_choose_country"
+            android:layout_centerHorizontal="true">
+
+            <RadioButton
+                android:id="@+id/egypt_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="مصر" />
+
+            <RadioButton
+                android:id="@+id/saudi_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="السعودية" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/button_green_rounded_background"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="متابعة"
+        android:textColor="@color/colorWhite" />
+
+    <ProgressBar
+        android:id="@+id/select_country_progress_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/country_layout_id"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

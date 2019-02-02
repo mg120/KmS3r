@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4290ce</color>
+    <color name="colorPrimaryDark">#4290ce</color>
+    <color name="colorAccent">#4290ce</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorError">#f77f7f</color>
+    <color name="colorCorrect">#77d881</color>
+    <color name="colorMainBackground">#f2f2f2</color>
+    <color name="colorTransparentBlack">#32000000</color>
+    <color name="colorGreen">#8bc543</color>
+    <color name="colorIntroDescription">#71a136</color>
+    <color name="colorFacebook">#3b5997</color>
+    <color name="colorTwitter">#1bb2e9</color>
+    <color name="colorGooglePlus">#f1f1f1</color>
+    <color name="colorGoogleText">#363636</color>
+    <color name="colorLoginInputBorder">#bebebe</color>
+    <color name="colorQuestionBarText">#6d7175</color>
+    <color name="colorAdsTime">#a6a6a6</color>
+    <color name="colorCategoryName">#464646</color>
+    <color name="colorSliderBorder">#eaeaea</color>
+    <color name="colorSliderFooter">#50000000</color>
+    <color name="colorAdsDescription">#424242</color>
+    <color name="colorOffGray">#808080</color>
+    <color name="colorDivider">#ebebeb</color>
+    <color name="colorOtherUserBackground">#efefef</color>
+    <color name="colorLessBlack">#272727</color>
+    <color name="search_box_background_color">#7ab8e9</color>
+    <color name="opacity">#A4000000</color>
+    <color name="imageBackground">#eee</color>
+</resources>

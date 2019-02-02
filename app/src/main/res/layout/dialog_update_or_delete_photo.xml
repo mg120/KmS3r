@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <TextView
+        android:id="@+id/update_photo_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="تحديث الصورة"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:background="@color/colorWhite"/>
+    <TextView
+        android:id="@+id/delete_photo_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="مسح الصورة"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="1dp"/>
+
+</LinearLayout>

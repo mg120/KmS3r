@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/forgot_password_background"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/ads_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:backgroundTint="#87B825"
+            android:src="@drawable/ic_add_white_24dp"/>
+
+        <TextView
+            android:id="@+id/ads_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إعلان"
+            android:layout_below="@id/ads_button"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            />
+        <TextView
+            android:layout_below="@id/ads_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اعرض منتج للبيع"
+            android:layout_centerHorizontal="true"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorOffGray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/questions_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_add_white_24dp"/>
+
+        <TextView
+            android:id="@+id/questions_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سؤال"
+            android:layout_below="@id/questions_button"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            />
+        <TextView
+            android:layout_below="@id/questions_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إضافة سؤال عن سعر"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
